@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,7 +89,8 @@ int main(void) {
     MX_USART1_UART_Init();
     MX_SPI1_Init();
     /* USER CODE BEGIN 2 */
-
+    // set global log level
+    Log_Set_Level(LOG_DEBUG);
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -100,10 +101,8 @@ int main(void) {
         /* USER CODE BEGIN 3 */
 
         HAL_Delay(1000);
-        char str[20] = "Hello Xjh!\r\n";
 
-        HAL_UART_Transmit(&huart1, str, 12, 1000);
-        HAL_SPI_Transmit(&hspi1, str, 12, 1000);
+        Log_debug("hello xjh!");
     }
     /* USER CODE END 3 */
 }
