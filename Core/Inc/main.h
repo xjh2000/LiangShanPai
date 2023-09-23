@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "utilites/log.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -61,6 +61,9 @@ void Error_Handler(void);
 #define LED1_GPIO_Port GPIOE
 #define RC522En_Pin GPIO_PIN_4
 #define RC522En_GPIO_Port GPIOC
+#define RC522IRQ_Pin GPIO_PIN_5
+#define RC522IRQ_GPIO_Port GPIOC
+#define RC522IRQ_EXTI_IRQn EXTI9_5_IRQn
 
 /* USER CODE BEGIN Private defines */
 

@@ -76,7 +76,7 @@ void Log_writter(const char *file, const char *func, const int line, const int l
 
     va_list ap;
     va_start(ap, fmt);
-    vprintf(fmt, ap);
+    vprintf(fmt, ap); // this maybe buffer overflow
     va_end(ap);
 
     printf("\r\n");
