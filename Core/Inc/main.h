@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LED1_Pin GPIO_PIN_3
 #define LED1_GPIO_Port GPIOE
+#define RC522En_Pin GPIO_PIN_4
+#define RC522En_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 
